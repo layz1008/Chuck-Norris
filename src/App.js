@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import Navbar from './Navbar';
+import ChuckyJokes from './ChuckyJokes';
 
-// import burger UI component
-import Burger from './Burger';
+import './App.css';
+import { Routes, Route } from "react-router-dom"
+
+
+ReactDOM.render(<ChuckNorrisJoke />, document.getElementById('root'));
+
 
 function App() {
   const [joke, setJoke] = useState('');
 
   useEffect(() => {
     axios
-      .get('http://api.icndb.com/jokes/random')
+      .get('https://api.chucknorris.io/jokes/random')
       .then(response => setJoke(response.data.value.joke));
   }, []);
 
   return (
-    <div>
-      <Burger />
+    <div className="App">
+      <Navbar />
+  
       <div>
         <p>{joke}</p>
       </div>
