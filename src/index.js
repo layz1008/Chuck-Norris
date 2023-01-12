@@ -4,10 +4,11 @@ import './index.css';
 import App from "./App.css"
 import { BrowserRouter } from 'react-router-dom';
 import ChuckyJokes from './ChuckyJokes';
-R
 
-eactDOM.render(<ChuckNorrisJoke />, document.getElementById('root'));
 
+ReactDOM.render(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById(‘root’));
+root.render(
 
 
 
