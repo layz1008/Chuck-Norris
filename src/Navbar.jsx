@@ -1,15 +1,13 @@
 import { Link } from 'react-router-dom'
+import ChuckyJokes from './ChuckyJokes.jsx';
 
-function Navbar() {
+function Navbar(props) {
     return (
         <header>
-            <h1>Chuck Norris</h1>
+        <h1>Ole Chuck</h1>
+        
             <nav>
-                <Link to="text">Text</Link>
-                <Link to="text">Text</Link>
-                <Link to="text">Text</Link>
-                <Link to="text">Text</Link>
-                <Link to="text">Text</Link>
+                <button onClick={props.getJoke}>New joke</button>
             </nav>
         </header>
     )

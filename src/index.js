@@ -1,21 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from "./App.css"
+import App from "./App"
 import { BrowserRouter } from 'react-router-dom';
+//import { ReportHandler } from 'web-vitals';
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
 
 
 
-
-
-
-ReactDOM.render(
+root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <App />
+    <App/>
     </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
  
 
@@ -23,3 +23,4 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 
+//reportWebVitals();
